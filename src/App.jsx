@@ -2054,16 +2054,18 @@ function App() {
         <div className="hero-fluid" aria-hidden="true">
           <video
             className="hero-video"
-            src="/assets/hero-aura-video.mp4"
-            poster="/assets/hero-fluid-v2.jpg"
+            poster="/assets/hero-fluid-v2.webp"
             autoPlay
             loop
             muted
             playsInline
-            preload="auto"
-            width="1920"
-            height="1080"
-          />
+            preload="metadata"
+            width="1440"
+            height="810"
+          >
+            <source src="/assets/hero-aura-video.webm" type='video/webm; codecs="vp9"' />
+            <source src="/assets/hero-aura-video.mp4" type='video/mp4; codecs="avc1.640028"' />
+          </video>
         </div>
       <section className="hero" id="top">
         <div className="hero-content page-shell" data-reveal>
@@ -2367,17 +2369,24 @@ function App() {
       <section className="contact-finale" id="contact">
         <div className="contact-fluid" ref={contactVideoRef} aria-hidden="true">
           <video
+            key={contactVideoReady ? "contact-video-ready" : "contact-video-idle"}
             className="contact-video"
-            src={contactVideoReady ? "/assets/hero-aura-video.mp4" : undefined}
             poster="/assets/contact-fluid-frame.webp"
             autoPlay
             loop
             muted
             playsInline
             preload="none"
-            width="1920"
-            height="1080"
-          />
+            width="1440"
+            height="810"
+          >
+            {contactVideoReady && (
+              <>
+                <source src="/assets/hero-aura-video.webm" type='video/webm; codecs="vp9"' />
+                <source src="/assets/hero-aura-video.mp4" type='video/mp4; codecs="avc1.640028"' />
+              </>
+            )}
+          </video>
         </div>
         <div className="page-shell finale-inner" data-reveal>
           <div className="finale-content">
