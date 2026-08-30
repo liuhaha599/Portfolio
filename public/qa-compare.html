@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudFlux QA Comparison</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #171717;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px;
+      }
+      section {
+        position: relative;
+        height: 540px;
+        overflow: hidden;
+        background: #fff;
+      }
+      h2 {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 3;
+        margin: 0;
+        padding: 7px 10px;
+        border-radius: 6px;
+        background: rgba(0, 0, 0, 0.72);
+        color: #fff;
+        font-size: 12px;
+      }
+      .reference-canvas {
+        width: 960px;
+        height: 540px;
+        overflow: hidden;
+        background: #fff;
+      }
+      .reference-canvas img {
+        display: block;
+        width: 640px;
+        height: auto;
+        margin-left: 160px;
+      }
+      .implementation {
+        display: block;
+        width: 960px;
+        height: 540px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h2>目标稿 · 1280px 内容区</h2>
+        <div class="reference-canvas">
+          <img src="/assets/cloudflux-project-cover.jpg" alt="" />
+        </div>
+      </section>
+      <section>
+        <h2>浏览器实现 · 1920×1080</h2>
+        <img class="implementation" src="/cloudflux-implementation-qa.png" alt="" />
+      </section>
+    </main>
+  </body>
+</html>

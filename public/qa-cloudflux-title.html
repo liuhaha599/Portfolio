@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudFlux Title QA</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 24px;
+        background: #171717;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+      main {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        align-items: start;
+      }
+      figure { margin: 0; }
+      figcaption {
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .frame {
+        aspect-ratio: 1430 / 404;
+        overflow: hidden;
+        background: #fff;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+      .implementation img {
+        object-position: center 8%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <figure>
+        <figcaption>REFERENCE</figcaption>
+        <div class="frame">
+          <img src="/assets/qa/cloudflux-title-reference.png" alt="标题参考样式" />
+        </div>
+      </figure>
+      <figure class="implementation">
+        <figcaption>IMPLEMENTATION</figcaption>
+        <div class="frame">
+          <img src="/assets/qa/cloudflux-title-centered.png" alt="标题实现效果" />
+        </div>
+      </figure>
+    </main>
+  </body>
+</html>

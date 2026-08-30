@@ -1,0 +1,223 @@
+.practice-chroma-grid {
+  --x: 50%;
+  --y: 50%;
+  --r: 300px;
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.practice-chroma-card {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --border-angle: 0deg;
+  --spotlight-color: rgba(84, 103, 239, 0.52);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-width: 0;
+  min-height: 330px;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: var(--card-gradient);
+  transition: border-color 280ms ease, transform 320ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 320ms ease;
+}
+
+.practice-chroma-card::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: radial-gradient(
+    circle 280px at var(--mouse-x) var(--mouse-y),
+    var(--spotlight-color) 0%,
+    rgba(84, 103, 239, 0.3) 38%,
+    rgba(124, 58, 237, 0.14) 60%,
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 420ms ease;
+  pointer-events: none;
+}
+
+.practice-chroma-card::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: -1px;
+  padding: 1px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 0deg 252deg,
+    rgba(84, 103, 239, 0.08) 270deg,
+    rgba(84, 103, 239, 0.76) 298deg,
+    #8ea0ff 316deg,
+    rgba(84, 103, 239, 0.18) 334deg,
+    transparent 360deg
+  );
+  opacity: 0;
+  pointer-events: none;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: practice-border-flow 2.2s linear infinite;
+  transition: opacity 280ms ease;
+}
+
+.practice-chroma-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--card-border);
+  box-shadow:
+    0 28px 72px rgba(0, 0, 0, 0.4),
+    0 0 48px rgba(84, 103, 239, 0.22),
+    0 0 0 1px color-mix(in srgb, var(--card-border) 42%, transparent),
+    inset 0 0 54px rgba(84, 103, 239, 0.08);
+}
+
+.practice-chroma-card:hover::before,
+.practice-chroma-card:hover::after {
+  opacity: 1;
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes practice-border-flow {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+.practice-chroma-number,
+.practice-chroma-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.practice-chroma-copy {
+  margin-top: 88px;
+}
+
+.practice-chroma-number {
+  color: #7182ff;
+  font-size: 13px;
+}
+
+.practice-chroma-copy h3 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: var(--text-heading-3);
+  line-height: 1.2;
+}
+
+.practice-chroma-copy p {
+  margin: 0;
+  color: var(--soft);
+  font-size: var(--text-body);
+  line-height: var(--line-body);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.practice-chroma-overlay,
+.practice-chroma-fade {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  background: rgba(3, 5, 12, 0.001);
+  pointer-events: none;
+  -webkit-backdrop-filter: saturate(0.3) brightness(0.58);
+  backdrop-filter: saturate(0.3) brightness(0.58);
+}
+
+.practice-chroma-overlay {
+  -webkit-mask-image: radial-gradient(
+    circle var(--r) at var(--x) var(--y),
+    transparent 0%,
+    transparent 18%,
+    rgba(0, 0, 0, 0.12) 34%,
+    rgba(0, 0, 0, 0.28) 52%,
+    rgba(0, 0, 0, 0.5) 72%,
+    white 100%
+  );
+  mask-image: radial-gradient(
+    circle var(--r) at var(--x) var(--y),
+    transparent 0%,
+    transparent 18%,
+    rgba(0, 0, 0, 0.12) 34%,
+    rgba(0, 0, 0, 0.28) 52%,
+    rgba(0, 0, 0, 0.5) 72%,
+    white 100%
+  );
+}
+
+.practice-chroma-fade {
+  opacity: 1;
+  -webkit-mask-image: radial-gradient(
+    circle var(--r) at var(--x) var(--y),
+    white 0%,
+    white 18%,
+    rgba(255, 255, 255, 0.88) 34%,
+    rgba(255, 255, 255, 0.7) 52%,
+    rgba(255, 255, 255, 0.5) 72%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    circle var(--r) at var(--x) var(--y),
+    white 0%,
+    white 18%,
+    rgba(255, 255, 255, 0.88) 34%,
+    rgba(255, 255, 255, 0.7) 52%,
+    rgba(255, 255, 255, 0.5) 72%,
+    transparent 100%
+  );
+}
+
+@media (max-width: 1023px) {
+  .practice-chroma-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .practice-chroma-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-chroma-card {
+    min-height: 260px;
+    padding: 26px;
+  }
+
+  .practice-chroma-copy {
+    margin-top: 64px;
+  }
+
+  .practice-chroma-overlay,
+  .practice-chroma-fade {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .practice-chroma-card::after {
+    animation: none;
+  }
+
+  .practice-chroma-overlay,
+  .practice-chroma-fade {
+    display: none;
+  }
+}

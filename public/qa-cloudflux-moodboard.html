@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudFlux Moodboard QA</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 24px;
+        background: #171717;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+      main {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        align-items: start;
+      }
+      figure { margin: 0; }
+      figcaption {
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <figure>
+        <figcaption>REFERENCE</figcaption>
+        <img src="/assets/qa/cloudflux-moodboard-reference.png" alt="设计稿参考" />
+      </figure>
+      <figure>
+        <figcaption>IMPLEMENTATION</figcaption>
+        <img src="/assets/qa/cloudflux-moodboard-implementation.png" alt="页面实现" />
+      </figure>
+    </main>
+  </body>
+</html>
