@@ -10,13 +10,13 @@ const exactSections = [
   },
   {
     key: "feedback",
-    src: "/assets/guance-exact/feedback@2x-v2.png",
+    src: "/assets/guance-exact/feedback@2x-v2.webp",
     height: 842,
     alt: "观测云用户反馈与内部自查",
   },
   {
     key: "strategy",
-    src: "/assets/guance-exact/strategy@2x.png",
+    src: "/assets/guance-exact/strategy@2x.webp",
     height: 952,
     alt: "观测云设计目标及策略",
   },
@@ -28,43 +28,43 @@ const exactSections = [
   },
   {
     key: "components",
-    src: "/assets/guance-2x/components/export.png",
+    src: "/assets/guance-2x/components/export.webp",
     height: 1217,
     alt: "观测云组件化设计与组件界面示例",
   },
   {
     key: "ai",
-    src: "/assets/guance-2x/ai/export.png",
+    src: "/assets/guance-2x/ai/export.webp",
     height: 1289,
     alt: "观测云 AI 助手设计与产品界面",
   },
   {
     key: "agent",
-    src: "/assets/guance-2x/agent/export.png",
+    src: "/assets/guance-2x/agent/export.webp",
     height: 1086,
     alt: "观测云 Agent 可观测设计与产品界面",
   },
   {
     key: "error",
-    src: "/assets/guance-2x/error/export.png",
+    src: "/assets/guance-2x/error/export.webp",
     height: 2355,
     alt: "观测云错误追踪设计与产品界面",
   },
   {
     key: "incident",
-    src: "/assets/guance-2x/incident/export.png",
+    src: "/assets/guance-2x/incident/export.webp",
     height: 2062,
     alt: "观测云事件管理设计与产品界面",
   },
   {
     key: "resource",
-    src: "/assets/guance-2x/resource/export.png",
+    src: "/assets/guance-2x/resource/export.webp",
     height: 1434,
     alt: "观测云统一资源目录设计与产品界面",
   },
   {
     key: "final",
-    src: "/assets/guance-2x/final/export.png",
+    src: "/assets/guance-2x/final/export.webp",
     height: 1080,
     alt: "更多观测云产品页面",
     crop: true,
@@ -83,7 +83,7 @@ function Hero() {
       </div>
       <div className="guance-exact-hero-art" aria-hidden="true">
         <img
-          src="/assets/guance-2x/hero/hero-export.png"
+          src="/assets/guance-2x/hero/hero-export.webp"
           alt=""
           width="3840"
           height="1800"

@@ -18,7 +18,7 @@ const projects = [
       "面向企业的可观测性 SaaS 平台，提供日志、指标、链路等数据监控能力，持续优化复杂信息架构与核心操作流程。",
     role: "平台功能迭代 / 信息架构与交互优化 / 开发还原走查 / 用户反馈分析 / 设计规范与 Icon 体系建设",
     accent: "blue",
-    image: "/assets/guance-figma/hero.png",
+    image: "/assets/guance-figma/hero.webp",
     imagePosition: "center top",
   },
   {
@@ -167,7 +167,7 @@ const socialWorks = [
     title: "CloudCare 功能更新",
     type: "公众号首图 · Product Update",
     category: "公众号首图",
-    image: "/assets/social/功能更新.png",
+    image: "/assets/social/功能更新.webp",
     ratio: "1280 / 381",
     height: 250,
   },
@@ -260,7 +260,7 @@ const otherWorks = [
     title: "企业级产品海报",
     type: "其他 · Product Poster",
     category: "其他",
-    image: "/assets/other/企业级海报.jpg",
+    image: "/assets/other/企业级海报.webp",
     ratio: "1560 / 14300",
     height: 920,
     previewPosition: "top",
@@ -269,7 +269,7 @@ const otherWorks = [
     title: "日志平台长图",
     type: "其他 · Product Poster",
     category: "其他",
-    image: "/assets/other/日志.jpg",
+    image: "/assets/other/日志.webp",
     ratio: "1560 / 7890",
     height: 900,
     previewPosition: "top",
@@ -278,7 +278,7 @@ const otherWorks = [
     title: "实时监控长图",
     type: "其他 · Product Poster",
     category: "其他",
-    image: "/assets/other/实时监控.jpg",
+    image: "/assets/other/实时监控.webp",
     ratio: "1560 / 8162",
     height: 900,
     previewPosition: "top",
@@ -305,7 +305,7 @@ const otherWorks = [
     title: "RUM 用户体验分析",
     type: "其他 · Product Poster",
     category: "其他",
-    image: "/assets/other/RUM.jpg",
+    image: "/assets/other/RUM.webp",
     ratio: "1560 / 8396",
     height: 900,
     previewPosition: "top",
@@ -317,7 +317,7 @@ const explorationWorks = [
     title: "暗色场景 · 白模",
     type: "3D · Scene Study",
     category: "3D",
-    image: "/assets/3d/暗色场景-白模.png",
+    image: "/assets/3d/暗色场景-白模.webp",
     ratio: "16 / 9",
     height: 360,
   },
@@ -325,7 +325,7 @@ const explorationWorks = [
     title: "暗色场景 · 渲染",
     type: "3D · Final Render",
     category: "3D",
-    image: "/assets/3d/暗色渲染.png",
+    image: "/assets/3d/暗色渲染.webp",
     ratio: "16 / 9",
     height: 360,
   },
@@ -341,7 +341,7 @@ const explorationWorks = [
     title: "登录注册 · 页面应用",
     type: "3D · UI Application",
     category: "3D",
-    image: "/assets/3d/登录注册@2x.jpg",
+    image: "/assets/3d/登录注册@2x.webp",
     ratio: "16 / 9",
     height: 360,
   },
@@ -349,7 +349,7 @@ const explorationWorks = [
     title: "智慧 AI · 白模",
     type: "3D · Form Study",
     category: "3D",
-    image: "/assets/3d/智慧AI-白模.png",
+    image: "/assets/3d/智慧AI-白模.webp",
     ratio: "32 / 13",
     height: 320,
   },
@@ -365,7 +365,7 @@ const explorationWorks = [
     title: "数据星 · 白模",
     type: "3D · Product Visual",
     category: "3D",
-    image: "/assets/3d/xing-白模.png",
+    image: "/assets/3d/xing-白模.webp",
     ratio: "3 / 4",
     height: 780,
   },
@@ -373,7 +373,7 @@ const explorationWorks = [
     title: "数据星 · 渲染",
     type: "3D · Final Render",
     category: "3D",
-    image: "/assets/3d/xing-渲染.png",
+    image: "/assets/3d/xing-渲染.webp",
     ratio: "3 / 4",
     height: 780,
   },
@@ -381,7 +381,7 @@ const explorationWorks = [
     title: "居家时光",
     type: "插画 · Lifestyle Scene",
     category: "插画",
-    image: "/assets/illustration/家居2.png",
+    image: "/assets/illustration/家居2.webp",
     ratio: "5 / 7",
     height: 700,
   },
@@ -389,7 +389,7 @@ const explorationWorks = [
     title: "四牌楼",
     type: "插画 · Architecture",
     category: "插画",
-    image: "/assets/illustration/建筑.png",
+    image: "/assets/illustration/建筑.webp",
     ratio: "2 / 3",
     height: 720,
   },
@@ -397,7 +397,7 @@ const explorationWorks = [
     title: "夏日树下",
     type: "插画 · Character Scene",
     category: "插画",
-    image: "/assets/illustration/日系人物场景.png",
+    image: "/assets/illustration/日系人物场景.webp",
     ratio: "620 / 877",
     height: 700,
   },
@@ -405,7 +405,7 @@ const explorationWorks = [
     title: "森林朋友",
     type: "插画 · Character",
     category: "插画",
-    image: "/assets/illustration/动物插画.png",
+    image: "/assets/illustration/动物插画.webp",
     ratio: "2 / 3",
     height: 720,
   },
@@ -421,7 +421,7 @@ const explorationWorks = [
     title: "元宵节海报",
     type: "插画 · Festival Poster",
     category: "插画",
-    image: "/assets/illustration/元宵节海报.png",
+    image: "/assets/illustration/元宵节海报.webp",
     ratio: "375 / 667",
     height: 800,
   },
@@ -429,7 +429,7 @@ const explorationWorks = [
     title: "蘑菇花园",
     type: "插画 · Plant Scene",
     category: "插画",
-    image: "/assets/illustration/植物小场景.png",
+    image: "/assets/illustration/植物小场景.webp",
     ratio: "1 / 1",
     height: 520,
   },
@@ -437,7 +437,7 @@ const explorationWorks = [
     title: "森林蘑菇",
     type: "插画 · Plant Scene",
     category: "插画",
-    image: "/assets/illustration/植物小场景1.png",
+    image: "/assets/illustration/植物小场景1.webp",
     ratio: "671 / 910",
     height: 680,
   },
@@ -455,7 +455,7 @@ const explorationWorks = [
     title: "数据能力图标合集",
     type: "3D · Icon Collection",
     category: "3D",
-    image: "/assets/3d/data-capability-icons.png",
+    image: "/assets/3d/data-capability-icons.webp",
     ratio: "1763 / 966",
     height: 360,
   },
@@ -463,10 +463,15 @@ const explorationWorks = [
 
 const explorationFilters = ["全部", "3D", "插画", "公众号首图", "其他"];
 
+const parseRatio = (ratio) => {
+  const [width, height] = String(ratio ?? "").split("/").map(Number);
+  return width > 0 && height > 0 ? width / height : 1;
+};
+
 const masonryItems = explorationWorks.map((work, index) => ({
   id: `visual-${index + 1}`,
-  img: work.image ?? "/assets/exploration-atlas-v1.png",
-  aspectRatio: work.category === "其他" ? 9 / 16 : undefined,
+  img: work.image ?? "/assets/exploration-atlas-v1.webp",
+  aspectRatio: work.category === "其他" ? 9 / 16 : parseRatio(work.ratio),
   title: work.title,
   type: work.type,
   cell: work.cell,
@@ -474,17 +479,17 @@ const masonryItems = explorationWorks.map((work, index) => ({
 }));
 
 const explorationFeaturedImages = [
-  "/assets/3d/暗色渲染.png",
-  "/assets/3d/data-capability-icons.png",
-  "/assets/illustration/建筑.png",
+  "/assets/3d/暗色渲染.webp",
+  "/assets/3d/data-capability-icons.webp",
+  "/assets/illustration/建筑.webp",
   "/assets/3d/智慧AI.jpg",
-  "/assets/3d/登录注册@2x.jpg",
-  "/assets/illustration/日系人物场景.png",
-  "/assets/3d/xing-渲染.png",
+  "/assets/3d/登录注册@2x.webp",
+  "/assets/illustration/日系人物场景.webp",
+  "/assets/3d/xing-渲染.webp",
   "/assets/social/智能监控.jpg",
-  "/assets/illustration/动物插画.png",
+  "/assets/illustration/动物插画.webp",
   "/assets/social/1024-3.png",
-  "/assets/illustration/元宵节海报.png",
+  "/assets/illustration/元宵节海报.webp",
   "/assets/other/1024_副本.jpg",
   "/assets/social/0717英伟达GPU.png",
 ];
@@ -592,6 +597,8 @@ function ProjectCard({ project }) {
         <img
           src={project.image}
           alt={`${project.title}项目封面`}
+          loading="lazy"
+          decoding="async"
           style={{ objectPosition: project.imagePosition ?? "center" }}
         />
       </div>
@@ -932,8 +939,12 @@ function ProjectDetailPage({ project, onProjectChange }) {
             </div>
             <img
               className="cloudflux-device"
-              src="/assets/cloudflux-device-cutout.png"
+              src="/assets/cloudflux-device-cutout.webp"
               alt="展示 CloudFlux 多云管理平台官网的笔记本电脑置于石台上"
+              width="1479"
+              height="1063"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
           <a
@@ -985,13 +996,13 @@ function ProjectDetailPage({ project, onProjectChange }) {
             </div>
           </article>
           <figure className="cloudflux-moodboard-image">
-            <img src="/assets/cloudflux-moodboard/orange-discs.jpg" alt="橙色半透明圆盘组成的轻盈三维视觉" />
+            <img src="/assets/cloudflux-moodboard/orange-discs.jpg" alt="橙色半透明圆盘组成的轻盈三维视觉" loading="lazy" decoding="async" />
           </figure>
           <figure className="cloudflux-moodboard-image">
-            <img src="/assets/cloudflux-moodboard/blue-orbits.jpg" alt="蓝色与橙色悬浮圆盘组成的未来感视觉" />
+            <img src="/assets/cloudflux-moodboard/blue-orbits.jpg" alt="蓝色与橙色悬浮圆盘组成的未来感视觉" loading="lazy" decoding="async" />
           </figure>
           <figure className="cloudflux-moodboard-image">
-            <img src="/assets/cloudflux-moodboard/water-ripple.jpg" alt="蓝白色水滴涟漪形成的灵动视觉" />
+            <img src="/assets/cloudflux-moodboard/water-ripple.jpg" alt="蓝白色水滴涟漪形成的灵动视觉" loading="lazy" decoding="async" />
           </figure>
         </section>
 
@@ -1077,6 +1088,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
             <img
               src="/assets/cloudflux-icon-showcase.jpg"
               alt="CloudFlux 橙色与灰色毛玻璃图标设计合集"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </section>
@@ -1104,12 +1117,16 @@ function ProjectDetailPage({ project, onProjectChange }) {
               <img
                 src="/assets/cloudflux-interaction-horizontal.jpg"
                 alt="横向内容卡片的鼠标交互范围示意"
+                loading="lazy"
+                decoding="async"
               />
             </figure>
             <figure>
               <img
                 src="/assets/cloudflux-interaction-vertical.jpg"
                 alt="纵向内容卡片的鼠标交互范围示意"
+                loading="lazy"
+                decoding="async"
               />
             </figure>
           </div>
@@ -1132,12 +1149,16 @@ function ProjectDetailPage({ project, onProjectChange }) {
               <img
                 src="/assets/cloudflux-brand-home.jpg"
                 alt="CloudFlux 多云管理平台官网首页与全生命周期服务支持体系"
+                loading="lazy"
+                decoding="async"
               />
             </figure>
             <figure>
               <img
                 src="/assets/cloudflux-brand-icons.jpg"
                 alt="CloudFlux 平台建设、在线运营、监控运维和售后服务的三维视觉"
+                loading="lazy"
+                decoding="async"
               />
             </figure>
           </div>
@@ -1158,6 +1179,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
             <img
               src="/assets/cloudflux-solutions-main.jpg"
               alt="CloudFlux 多云管理、科研云、政务云与 ENS 虚商管理解决方案"
+              loading="lazy"
+              decoding="async"
             />
           </figure>
 
@@ -1167,6 +1190,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
                 <img
                   src={`/assets/cloudflux-solutions-state-${state}.jpg`}
                   alt={`CloudFlux 解决方案交互展示效果 ${state}`}
+                  loading="lazy"
+                  decoding="async"
                 />
               </figure>
             ))}
@@ -1182,6 +1207,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
         <img
           src="/assets/cloudflux-overall-pages-full-clean.jpg"
           alt="CloudFlux 官网多个页面的整体设计展示"
+          loading="lazy"
+          decoding="async"
         />
         <figcaption>THANKS FOR WATCHING</figcaption>
       </figure>
@@ -1478,7 +1505,7 @@ function ProjectDetailPage({ project, onProjectChange }) {
             <p>{item.text}</p>
             {item.media && (
               <figure className={`cloudcare-case-note-media${item.mediaVariant ? ` cloudcare-case-note-media--${item.mediaVariant}` : ""}`}>
-                <img src={item.media} alt={item.mediaAlt} decoding="async" />
+                <img src={item.media} alt={item.mediaAlt} loading="lazy" decoding="async" />
               </figure>
             )}
           </article>
@@ -1493,7 +1520,7 @@ function ProjectDetailPage({ project, onProjectChange }) {
           {personas.map((persona) => (
             <article className="cloudcare-persona-card" key={persona.title}>
               <span className="cloudcare-persona-avatar">
-                <img src={persona.avatar} alt={persona.avatarLabel} />
+                <img src={persona.avatar} alt={persona.avatarLabel} loading="lazy" decoding="async" />
               </span>
               <h4>{persona.title}</h4>
               <div className="cloudcare-persona-block">
@@ -1551,6 +1578,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
               className="cloudcare-pain-map"
               src="/assets/cloudcare-pain-map.png"
               alt="CloudCare 业务侧与用户侧核心痛点关系图"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </section>
@@ -1645,7 +1674,7 @@ function ProjectDetailPage({ project, onProjectChange }) {
                 {renderCloudCareHighlights(cloudCareDashboardHighlights)}
                 <figure className="cloudcare-case-figure cloudcare-dashboard-figure">
                   <img
-                    src="/assets/cloudcare-detail/cloudcare-dashboard@2x.png"
+                    src="/assets/cloudcare-detail/cloudcare-dashboard@2x.webp"
                     alt="CloudCare Pro 经营看板与重点数据界面"
                     loading="lazy"
                     decoding="async"
@@ -1675,7 +1704,7 @@ function ProjectDetailPage({ project, onProjectChange }) {
           <section className="cloudcare-more-pages" aria-labelledby="cloudcare-pro-more-pages-title">
             <img
               className="cloudcare-more-pages-visual"
-              src="/assets/cloudcare-detail/cloudcare-pro-more-pages@2x.png"
+              src="/assets/cloudcare-detail/cloudcare-pro-more-pages@2x.webp"
               alt="CloudCare Pro 更多产品页面展示"
               loading="lazy"
               decoding="async"
@@ -1737,7 +1766,7 @@ function ProjectDetailPage({ project, onProjectChange }) {
                 </figure>
                 <figure className="cloudcare-case-figure cloudcare-saas-home-figure">
                   <img
-                    src="/assets/cloudcare-detail/cloudcare-saas-home@2x.png"
+                    src="/assets/cloudcare-detail/cloudcare-saas-home@2x.webp"
                     alt="CloudCare SaaS 工作首页"
                     loading="lazy"
                     decoding="async"
@@ -1753,7 +1782,7 @@ function ProjectDetailPage({ project, onProjectChange }) {
               {renderCloudCareHighlights(cloudCareWorkflowHighlights, "cloudcare-case-notes--columns")}
               <figure className="cloudcare-case-figure cloudcare-workflow-figure">
                 <img
-                  src="/assets/cloudcare-detail/cloudcare-workflow@2x.png"
+                  src="/assets/cloudcare-detail/cloudcare-workflow@2x.webp"
                   alt="CloudCare SaaS 审批列表、流程详情和流程配置界面"
                   loading="lazy"
                   decoding="async"
@@ -1769,7 +1798,7 @@ function ProjectDetailPage({ project, onProjectChange }) {
                 {renderCloudCareHighlights(cloudCareProjectHighlights)}
                 <figure className="cloudcare-case-figure cloudcare-gantt-figure">
                   <img
-                    src="/assets/cloudcare-detail/cloudcare-gantt@2x.png"
+                    src="/assets/cloudcare-detail/cloudcare-gantt@2x.webp"
                     alt="CloudCare SaaS 项目任务甘特图"
                     loading="lazy"
                     decoding="async"
@@ -1782,7 +1811,7 @@ function ProjectDetailPage({ project, onProjectChange }) {
           <section className="cloudcare-more-pages" aria-labelledby="cloudcare-saas-more-pages-title">
             <img
               className="cloudcare-more-pages-visual"
-              src="/assets/cloudcare-detail/cloudcare-saas-more-pages@2x.png"
+              src="/assets/cloudcare-detail/cloudcare-saas-more-pages@2x.webp"
               alt="CloudCare SaaS 更多产品页面展示"
               loading="lazy"
               decoding="async"
@@ -1834,8 +1863,10 @@ function App() {
   const [activeSection, setActiveSection] = useState("");
   const [navScrolled, setNavScrolled] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
+  const [contactVideoReady, setContactVideoReady] = useState(false);
   const [selectedExplorationWork, setSelectedExplorationWork] = useState(null);
   const contactCloseRef = useRef(null);
+  const contactVideoRef = useRef(null);
   const explorationCloseRef = useRef(null);
 
   useEffect(() => {
@@ -1889,6 +1920,26 @@ function App() {
     );
 
     revealItems.forEach((item) => observer.observe(item));
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const target = contactVideoRef.current;
+    if (!target || !("IntersectionObserver" in window)) {
+      setContactVideoReady(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setContactVideoReady(true);
+        observer.disconnect();
+      },
+      { rootMargin: "600px 0px" },
+    );
+
+    observer.observe(target);
     return () => observer.disconnect();
   }, []);
 
@@ -2010,6 +2061,8 @@ function App() {
             muted
             playsInline
             preload="auto"
+            width="1920"
+            height="1080"
           />
         </div>
       <section className="hero" id="top">
@@ -2031,7 +2084,7 @@ function App() {
           <div className="resume-card" data-reveal>
           <aside className="resume-profile">
             <div className="resume-photo">
-              <img src="/assets/profile.jpg" alt="刘雪源个人形象照" />
+              <img src="/assets/profile.jpg" alt="刘雪源个人形象照" loading="lazy" decoding="async" />
               <span className="photo-glow" aria-hidden="true" />
             </div>
             <div className="resume-identity">
@@ -2108,7 +2161,7 @@ function App() {
         <div className="section-label">Profile</div>
         <div className="about-layout">
           <div className="portrait-card" data-reveal>
-            <img src="/assets/profile.jpg" alt="刘雪源个人形象照" />
+            <img src="/assets/profile.jpg" alt="刘雪源个人形象照" loading="lazy" decoding="async" />
             <div className="portrait-caption">
               <span>UI/UX Designer</span>
               <strong>Shanghai</strong>
@@ -2156,7 +2209,7 @@ function App() {
               {marqueeLogos.map((logo) => (
                 <span className="logo-marquee-item" key={`${group}-${logo.name}`}>
                   <span className="logo-marquee-icon">
-                    <img src={logo.image} alt="" />
+                    <img src={logo.image} alt="" loading="lazy" decoding="async" />
                   </span>
                 </span>
               ))}
@@ -2210,15 +2263,22 @@ function App() {
                       "--reveal-delay": `${(columnIndex * 3 + workIndex) * 55}ms`,
                     }}
                   >
-                    <div
-                      className={`exploration-art ${work.cell ?? ""}`}
-                      style={work.image ? {
-                        backgroundImage: `url("${work.image}")`,
-                        backgroundPosition: work.previewPosition ?? "center",
-                        backgroundSize: "cover",
-                      } : undefined}
-                      aria-hidden="true"
-                    />
+                    {work.image ? (
+                      <img
+                        className="exploration-image"
+                        src={work.image}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                        style={{ objectPosition: work.previewPosition ?? "center" }}
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <div
+                        className={`exploration-art ${work.cell ?? ""}`}
+                        aria-hidden="true"
+                      />
+                    )}
                     <div className="exploration-overlay">
                       <span>{work.type}</span>
                       <h3>{work.title}</h3>
@@ -2305,16 +2365,18 @@ function App() {
       </section>
 
       <section className="contact-finale" id="contact">
-        <div className="contact-fluid" aria-hidden="true">
+        <div className="contact-fluid" ref={contactVideoRef} aria-hidden="true">
           <video
             className="contact-video"
-            src="/assets/hero-aura-video.mp4"
-            poster="/assets/contact-fluid-frame.png"
+            src={contactVideoReady ? "/assets/hero-aura-video.mp4" : undefined}
+            poster="/assets/contact-fluid-frame.webp"
             autoPlay
             loop
             muted
             playsInline
-            preload="metadata"
+            preload="none"
+            width="1920"
+            height="1080"
           />
         </div>
         <div className="page-shell finale-inner" data-reveal>
@@ -2371,7 +2433,7 @@ function App() {
               <p>期待与您交流合作，<br />一起创造更多有价值的设计。</p>
               <img
                 className="contact-modal-art"
-                src="/assets/contact-envelope-v1.png"
+                src="/assets/contact-envelope-v1.webp"
                 alt=""
                 aria-hidden="true"
               />

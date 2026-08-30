@@ -41,18 +41,42 @@ function useMeasure() {
   return [ref, size];
 }
 
-async function preloadImages(urls) {
-  const entries = await Promise.all(
-    [...new Set(urls)].map(
-      (src) => new Promise((resolve) => {
-        const image = new Image();
-        image.src = src;
-        image.onload = () => resolve([src, image.naturalWidth / image.naturalHeight]);
-        image.onerror = () => resolve([src, 1]);
-      }),
-    ),
+function DeferredImage({ src, style }) {
+  const ref = useRef(null);
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    const image = ref.current;
+    if (!image || !("IntersectionObserver" in window)) {
+      setIsReady(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setIsReady(true);
+        observer.disconnect();
+      },
+      { rootMargin: "600px 0px" },
+    );
+
+    observer.observe(image);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <img
+      ref={ref}
+      className="masonry-item-art masonry-item-image"
+      src={isReady ? src : undefined}
+      alt=""
+      loading="lazy"
+      decoding="async"
+      style={style}
+      aria-hidden="true"
+    />
   );
-  return Object.fromEntries(entries);
 }
 
 export default function Masonry({
@@ -69,17 +93,7 @@ export default function Masonry({
 }) {
   const columns = useMedia(1);
   const [containerRef, { width }] = useMeasure();
-  const [imagesReady, setImagesReady] = useState(false);
-  const [imageRatios, setImageRatios] = useState({});
   const hasMounted = useRef(false);
-
-  useEffect(() => {
-    setImagesReady(false);
-    preloadImages(items.map((item) => item.img)).then((ratios) => {
-      setImageRatios(ratios);
-      setImagesReady(true);
-    });
-  }, [items]);
 
   const layout = useMemo(() => {
     if (!width) return { grid: [], height: 0 };
@@ -89,7 +103,7 @@ export default function Masonry({
     const columnHeights = new Array(columns).fill(0);
     const grid = items.map((item) => {
       const column = columnHeights.indexOf(Math.min(...columnHeights));
-      const aspectRatio = item.aspectRatio ?? imageRatios[item.img] ?? 1;
+      const aspectRatio = item.aspectRatio ?? 1;
       const height = columnWidth / aspectRatio;
       const x = (columnWidth + gap) * column;
       const y = columnHeights[column];
@@ -98,7 +112,7 @@ export default function Masonry({
     });
 
     return { grid, height: Math.max(...columnHeights, 0) - gap };
-  }, [columns, imageRatios, items, width]);
+  }, [columns, items, width]);
 
   const initialPosition = (item) => {
     const container = containerRef.current?.getBoundingClientRect();
@@ -117,7 +131,7 @@ export default function Masonry({
   };
 
   useLayoutEffect(() => {
-    if (!imagesReady || !containerRef.current || layout.grid.length === 0) return;
+    if (!containerRef.current || layout.grid.length === 0) return;
 
     layout.grid.forEach((item, index) => {
       const element = containerRef.current.querySelector(`[data-key="${item.id}"]`);
@@ -151,7 +165,7 @@ export default function Masonry({
     });
 
     hasMounted.current = true;
-  }, [animateFrom, blurToFocus, duration, ease, imagesReady, layout, stagger]);
+  }, [animateFrom, blurToFocus, duration, ease, layout, stagger]);
 
   const handleMouseEnter = (event) => {
     if (!scaleOnHover) return;
@@ -180,15 +194,17 @@ export default function Masonry({
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <span
-            className={`masonry-item-art exploration-art ${item.cell ?? ""}`}
-            style={item.work.image ? {
-              backgroundImage: `url("${item.work.image}")`,
-              backgroundPosition: item.work.previewPosition ?? "center",
-              backgroundSize: "cover",
-            } : undefined}
-            aria-hidden="true"
-          />
+          {item.work.image ? (
+            <DeferredImage
+              src={item.work.image}
+              style={{ objectPosition: item.work.previewPosition ?? "center" }}
+            />
+          ) : (
+            <span
+              className={`masonry-item-art exploration-art ${item.cell ?? ""}`}
+              aria-hidden="true"
+            />
+          )}
           <span className="masonry-item-copy">
             <small>{item.type}</small>
             <strong>{item.title}</strong>

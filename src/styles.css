@@ -3034,7 +3034,7 @@ a:focus-visible {
   width: 100%;
   height: 100%;
   z-index: 0;
-  background: url("/assets/cloudcare-hero-visual@3x.png") center / cover no-repeat;
+  background: url("/assets/cloudcare-hero-visual@3x.webp") center / cover no-repeat;
 }
 
 .cloudcare-hero-inner {
@@ -7992,10 +7992,15 @@ a:focus-visible {
   }
 }
 
-.exploration-art {
+.exploration-art,
+.exploration-image {
   position: absolute;
   inset: 0;
-  background-image: url("/assets/exploration-atlas-v1.png");
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-image: url("/assets/exploration-atlas-v1.webp");
   background-repeat: no-repeat;
   background-size: 300% 300%;
   filter: saturate(0.92) contrast(1.02);
@@ -8004,9 +8009,15 @@ a:focus-visible {
 }
 
 .exploration-card:hover .exploration-art,
-.exploration-card:focus-visible .exploration-art {
+.exploration-card:focus-visible .exploration-art,
+.exploration-card:hover .exploration-image,
+.exploration-card:focus-visible .exploration-image {
   transform: scaleX(var(--art-flip, 1)) scale(1.075);
   filter: saturate(1.06) contrast(1.03);
+}
+
+.exploration-image {
+  background-image: none;
 }
 
 .exploration-art.cell-01 { background-position: 0% 0%; }

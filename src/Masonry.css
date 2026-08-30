@@ -33,6 +33,15 @@
   transform: scaleX(var(--art-flip, 1)) scale(1.02);
 }
 
+.masonry-item-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .masonry-item:hover .masonry-item-art,
 .masonry-item:focus-visible .masonry-item-art {
   transform: scaleX(var(--art-flip, 1)) scale(1.08);
