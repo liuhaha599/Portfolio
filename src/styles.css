@@ -2987,7 +2987,9 @@ a:focus-visible {
 }
 
 .cloudcare-detail {
+  width: min(100%, 1920px);
   min-height: 100svh;
+  margin: 0 auto;
   background: #edf4fc;
 }
 
@@ -3051,7 +3053,7 @@ a:focus-visible {
   top: 153px;
   left: 22px;
   z-index: 6;
-  width: 570px;
+  width: min(680px, calc(100% - 44px));
 }
 
 .cloudcare-eyebrow {
@@ -3066,7 +3068,7 @@ a:focus-visible {
   color: #2c2c2c;
   font-size: 31px;
   font-weight: 400;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   line-height: 1.2;
 }
 
@@ -3092,7 +3094,7 @@ a:focus-visible {
   font-family: Arial, "Helvetica Neue", "PingFang SC", sans-serif;
   font-size: 96px;
   font-weight: 800;
-  letter-spacing: -0.055em;
+  letter-spacing: 0;
   line-height: 0.92;
 }
 
@@ -3104,13 +3106,13 @@ a:focus-visible {
   margin-top: 20px;
   font-size: 92px;
   font-weight: 700;
-  letter-spacing: 0.005em;
+  letter-spacing: 0;
 }
 
 .cloudcare-copy h1 span:last-child {
   margin-top: 24px;
   font-size: 91px;
-  letter-spacing: 0.035em;
+  letter-spacing: 0;
 }
 
 .cloudcare-direction {
@@ -3206,6 +3208,8 @@ a:focus-visible {
 }
 
 .cloudcare-persona-group {
+  display: grid;
+  grid-template-rows: auto 1fr;
   min-width: 0;
   padding: 24px 28px 28px;
   border-radius: 28px;
@@ -3230,7 +3234,7 @@ a:focus-visible {
 
 .cloudcare-persona-card {
   min-width: 0;
-  height: 400px;
+  height: auto;
   min-height: 400px;
   padding: 32px 14px 22px;
   border-radius: 22px;
@@ -4389,11 +4393,16 @@ a:focus-visible {
 .cloudcare-goal-principles {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 44px;
+  gap: 0 44px;
 }
 
 .cloudcare-goal-principle {
   position: relative;
+  display: grid;
+  /* Shared tracks keep the measures aligned when goal copy wraps. */
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  row-gap: 0;
   min-width: 0;
   padding-top: 40px;
 }
@@ -4427,10 +4436,6 @@ a:focus-visible {
 
 .cloudcare-goal-copy + .cloudcare-goal-copy {
   margin-top: 24px;
-}
-
-.cloudcare-goal-principle > .cloudcare-goal-copy:first-of-type {
-  min-height: 99px;
 }
 
 .cloudcare-goal-copy h4 {
@@ -4717,7 +4722,8 @@ a:focus-visible {
   .cloudcare-journey-inner > h2 span {
     display: block;
     margin-top: 4px;
-    font-size: 34px;
+    font-size: 24px;
+    overflow-wrap: anywhere;
   }
 
   .cloudcare-goals-inner > h2 {
@@ -4776,8 +4782,9 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .cloudcare-goal-principle > .cloudcare-goal-copy:first-of-type {
-    min-height: 0;
+  .cloudcare-goal-principle {
+    display: block;
+    grid-row: auto;
   }
 
   .cloudcare-special-goals {
@@ -4897,7 +4904,7 @@ a:focus-visible {
 }
 
 .cloudcare-dashboard-layout {
-  grid-template-columns: 375px minmax(0, 1005px);
+  grid-template-columns: minmax(0, 375fr) minmax(0, 1005fr);
   gap: 20px;
 }
 
@@ -4907,8 +4914,8 @@ a:focus-visible {
 }
 
 .cloudcare-alert-layout {
-  grid-template-columns: 860px minmax(0, 457px);
-  gap: 83px;
+  grid-template-columns: minmax(0, 860fr) minmax(0, 457fr);
+  gap: 5.928571%;
 }
 
 .cloudcare-alert-layout .cloudcare-case-notes {
@@ -4923,17 +4930,16 @@ a:focus-visible {
 .cloudcare-more-pages {
   position: relative;
   width: 100%;
-  height: 1080px;
-  padding: 60px 0;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #f7f8fb;
 }
 
 .cloudcare-more-pages-visual {
   position: absolute;
-  top: -615px;
+  top: -56.944444%;
   left: 50%;
-  width: 2606px;
+  width: 135.729167%;
   max-width: none;
   height: auto;
   transform: translateX(-50%);
@@ -4964,8 +4970,8 @@ a:focus-visible {
 }
 
 .cloudcare-saas-home-layout {
-  grid-template-columns: 350px 266px minmax(0, 664px);
-  gap: 60px;
+  grid-template-columns: minmax(0, 350fr) minmax(0, 266fr) minmax(0, 664fr);
+  gap: 4.285714%;
 }
 
 .cloudcare-saas-home-layout .cloudcare-case-notes {
@@ -4974,13 +4980,13 @@ a:focus-visible {
 
 .cloudcare-saas-nav-figure,
 .cloudcare-saas-home-figure {
-  height: 715px;
+  width: 100%;
 }
 
 .cloudcare-saas-nav-figure img,
 .cloudcare-saas-home-figure img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
   object-position: top center;
 }
@@ -4998,7 +5004,7 @@ a:focus-visible {
 }
 
 .cloudcare-project-plan-layout {
-  grid-template-columns: 600px 860px;
+  grid-template-columns: minmax(0, 600fr) minmax(0, 800fr);
 }
 
 .cloudcare-project-plan-layout .cloudcare-case-notes {
@@ -5006,11 +5012,19 @@ a:focus-visible {
 }
 
 .cloudcare-gantt-figure {
-  width: 860px;
-  margin-left: -60px;
+  width: 107.5%;
+  margin-left: -7.5%;
 }
 
 @media (max-width: 1199px) {
+  .cloudcare-persona-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .cloudcare-persona-card {
+    min-height: 0;
+  }
+
   .cloudcare-dashboard-layout,
   .cloudcare-alert-layout,
   .cloudcare-saas-home-layout,
@@ -5036,6 +5050,34 @@ a:focus-visible {
   .cloudcare-saas-nav-figure img,
   .cloudcare-saas-home-figure img {
     height: auto;
+  }
+
+  .cloudcare-saas-nav-figure {
+    width: min(266px, 100%);
+  }
+
+  .cloudcare-copy h1 {
+    font-size: 72px;
+  }
+
+  .cloudcare-copy h1 span:first-child,
+  .cloudcare-copy h1 span:last-child {
+    font-size: 64px;
+  }
+
+  .cloudcare-eyebrow p {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .cloudcare-saas-home-layout {
+    grid-template-columns: minmax(0, 266fr) minmax(0, 664fr);
+    gap: 40px;
+  }
+
+  .cloudcare-saas-home-layout > .cloudcare-case-notes {
+    grid-column: 1 / -1;
   }
 }
 
@@ -5070,12 +5112,17 @@ a:focus-visible {
   }
 
   .cloudcare-more-pages {
-    height: 720px;
+    aspect-ratio: auto;
+    padding-top: 154px;
   }
 
   .cloudcare-more-pages-visual {
-    top: -355px;
-    width: 1500px;
+    position: static;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center 50%;
+    transform: none;
   }
 
   .cloudcare-more-pages-heading {
@@ -10222,6 +10269,37 @@ body.modal-open {
 
   .cloudcare-detail {
     min-height: 100svh;
+    padding-top: 89px;
+  }
+
+  .cloudcare-detail .project-detail-nav-inner {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 40px 36px;
+    height: 88px;
+    padding: 6px 20px;
+  }
+
+  .cloudcare-detail .project-detail-nav-links {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .cloudcare-detail .project-detail-nav-links button {
+    min-height: 36px;
+    font-size: 13px;
+  }
+
+  .cloudcare-detail .project-detail-nav-links button.is-active::after {
+    bottom: 0;
+  }
+
+  .cloudcare-detail .project-detail-resume {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
   }
 
   .guance-hero {
@@ -10532,9 +10610,10 @@ body.modal-open {
     background: linear-gradient(
       180deg,
       rgba(226, 237, 250, 0.98) 0%,
-      rgba(226, 237, 250, 0.94) 49%,
-      rgba(226, 237, 250, 0.26) 72%,
-      transparent 100%
+      rgba(226, 237, 250, 0.94) 38%,
+      rgba(226, 237, 250, 0.16) 65%,
+      rgba(237, 244, 252, 0.3) 88%,
+      #edf4fc 100%
     );
   }
 
@@ -10542,8 +10621,8 @@ body.modal-open {
     inset: 0;
     width: auto;
     height: auto;
-    background-position: 68% center;
-    background-size: auto 720px;
+    background-position: 88% bottom;
+    background-size: auto 460px;
     transform: none;
     -webkit-mask-image: none;
     mask-image: none;
@@ -10554,7 +10633,7 @@ body.modal-open {
   }
 
   .cloudcare-copy {
-    top: 92px;
+    top: 56px;
     left: 20px;
     width: calc(100% - 40px);
   }
@@ -10576,22 +10655,26 @@ body.modal-open {
   }
 
   .cloudcare-copy h1 {
-    font-size: clamp(52px, 15vw, 68px);
-    line-height: 0.94;
+    font-size: 52px;
+    line-height: 1.05;
   }
 
   .cloudcare-copy h1 span:first-child {
     margin-top: 18px;
-    font-size: clamp(45px, 13vw, 60px);
+    font-size: 44px;
   }
 
   .cloudcare-copy h1 span:last-child {
     margin-top: 18px;
+    font-size: 48px;
   }
 
   .cloudcare-direction {
-    top: 358px;
+    display: block;
+    position: relative;
+    top: auto;
     width: 52px;
+    margin-top: 32px;
   }
 
   .cloudflux-hero {
@@ -11262,6 +11345,31 @@ body.modal-open {
   .back-to-top {
     right: 16px;
     bottom: 76px;
+  }
+}
+
+@media (max-width: 389px) {
+  .cloudcare-copy h1 {
+    font-size: 48px;
+  }
+
+  .cloudcare-eyebrow p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 359px) {
+  .cloudcare-copy h1 {
+    font-size: 42px;
+  }
+
+  .cloudcare-copy h1 span:first-child {
+    font-size: 38px;
+  }
+
+  .cloudcare-persona-group {
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 

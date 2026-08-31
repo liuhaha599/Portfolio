@@ -1577,6 +1577,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
             <img
               className="cloudcare-pain-map"
               src="/assets/cloudcare-pain-map.png"
+              width="1696"
+              height="577"
               alt="CloudCare 业务侧与用户侧核心痛点关系图"
               loading="lazy"
               decoding="async"
@@ -1675,6 +1677,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
                 <figure className="cloudcare-case-figure cloudcare-dashboard-figure">
                   <img
                     src="/assets/cloudcare-detail/cloudcare-dashboard@2x.webp"
+                    width="2058"
+                    height="1976"
                     alt="CloudCare Pro 经营看板与重点数据界面"
                     loading="lazy"
                     decoding="async"
@@ -1691,6 +1695,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
                 <figure className="cloudcare-case-figure cloudcare-alert-figure">
                   <img
                     src="/assets/cloudcare-detail/cloudcare-alert-detail@2x.png"
+                    width="1720"
+                    height="1205"
                     alt="CloudCare 告警详情侧滑面板与处理时间线"
                     loading="lazy"
                     decoding="async"
@@ -1705,6 +1711,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
             <img
               className="cloudcare-more-pages-visual"
               src="/assets/cloudcare-detail/cloudcare-pro-more-pages@2x.webp"
+              width="3200"
+              height="2823"
               alt="CloudCare Pro 更多产品页面展示"
               loading="lazy"
               decoding="async"
@@ -1759,6 +1767,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
                 <figure className="cloudcare-case-figure cloudcare-saas-nav-figure">
                   <img
                     src="/assets/cloudcare-detail/cloudcare-saas-nav@2x.png"
+                    width="532"
+                    height="1430"
                     alt="CloudCare SaaS 分层业务导航"
                     loading="lazy"
                     decoding="async"
@@ -1767,6 +1777,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
                 <figure className="cloudcare-case-figure cloudcare-saas-home-figure">
                   <img
                     src="/assets/cloudcare-detail/cloudcare-saas-home@2x.webp"
+                    width="1352"
+                    height="1454"
                     alt="CloudCare SaaS 工作首页"
                     loading="lazy"
                     decoding="async"
@@ -1783,6 +1795,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
               <figure className="cloudcare-case-figure cloudcare-workflow-figure">
                 <img
                   src="/assets/cloudcare-detail/cloudcare-workflow@2x.webp"
+                  width="2926"
+                  height="1087"
                   alt="CloudCare SaaS 审批列表、流程详情和流程配置界面"
                   loading="lazy"
                   decoding="async"
@@ -1799,6 +1813,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
                 <figure className="cloudcare-case-figure cloudcare-gantt-figure">
                   <img
                     src="/assets/cloudcare-detail/cloudcare-gantt@2x.webp"
+                    width="1720"
+                    height="1044"
                     alt="CloudCare SaaS 项目任务甘特图"
                     loading="lazy"
                     decoding="async"
@@ -1812,6 +1828,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
             <img
               className="cloudcare-more-pages-visual"
               src="/assets/cloudcare-detail/cloudcare-saas-more-pages@2x.webp"
+              width="3200"
+              height="2823"
               alt="CloudCare SaaS 更多产品页面展示"
               loading="lazy"
               decoding="async"
@@ -1827,6 +1845,8 @@ function ProjectDetailPage({ project, onProjectChange }) {
               <figure className="cloudcare-case-figure cloudcare-design-system-figure">
                 <img
                   src="/assets/cloudcare-detail/cloudcare-design-system@2x.png"
+                  width="2798"
+                  height="1542"
                   alt="CloudCare 颜色、表单、按钮和导航组件设计规范"
                   loading="lazy"
                   decoding="async"
